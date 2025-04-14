@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="./style.css">
+    <title>Outwest Landscaping</title>
+
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+    <nav id="nav">
+        <svg id="hamburger" viewBox="0 0 250 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect class="top" width="250" height="30" rx="15" y="0" fill="#017143" />
+            <rect class="middle" width="250" height="30" rx="15" y="84" fill="#017143" />
+            <rect class="bottom" width="250" height="30" rx="15" y="165" fill="#017143" />
+        </svg>
+        <ul id="navbar">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <a href="#contact" class="button">Free Estimate</a>
+        </ul>
+    </nav>
+    <section id="hero">
+        <div class="hero-inner_wrapper">
+            <img src="./assets/outwest.png" alt="">
+        </div>
+        <div class="hero-inner_wrapper">
+            <h1>Transform Your Landscape with Fast, Professional Service.</h1>
+            <a href="#contact">Call Now</a>
+            <p class="hours"> Mon - Sat <br> 7:00 a.m. - 7:00 p.m.
+            </p>
+        </div>
+
+    </section>
+    <section id="services">
+        <div class="grid">
+            <div class="grid-cell large-cell service-grid_wrapper_text">
+                <h2>Making Lawn Care and Property Maintenance Easy and Worry-Free</h2>
+                <p>
+                    At OutWest Landscaping, our mission is to elevate the beauty and value of every property we serve—delivering reliable, top-quality care that exceeds expectations at every step.</p>
+            </div>
+            <div class="grid-cell large-cell">
+                <div class="service-grid_wrapper service-grid_wrapper_first">
+                    <div class="service-grid_wrapper-inner">
+                        <h3>Lawn Maintenance</h3>
+                        <p>Keep your lawn healthy and beautiful with our expert lawn maintenance services. We offer regular mowing, trimming, and edging to ensure a neat and vibrant lawn all year round. Our team tailors care to meet the specific needs of your lawn, ensuring it thrives through every season.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-cell large-cell">
+                <div class="service-grid_wrapper">
+                    <div class="service-grid_wrapper-inner">
+                        <h3>Landscaping</h3>
+                        <p>Transform your outdoor space with professional landscaping services. From vibrant gardens to custom hardscaping, we design and install solutions that enhance your yard’s beauty and curb appeal. Let our team bring your landscape vision to life with creative, personalized care.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-cell">
+                <div class="service-grid_wrapper">
+                    <div class="service-grid_wrapper-inner">
+                        <h3>Sod Install</h3>
+                        <p>Get a lush, green lawn fast with our sod installation. We prepare your soil and expertly lay sod for quick establishment, giving you a beautiful lawn right away.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-cell">
+                <div class="service-grid_wrapper">
+                    <div class="service-grid_wrapper-inner">
+                        <h3>Flowerbed Maintenance</h3>
+                        <p>Keep your flowerbeds vibrant with our maintenance service, including weeding, mulching, pruning, and seasonal plantings for long-lasting beauty.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-cell">
+                <div class="service-grid_wrapper">
+                    <div class="service-grid_wrapper-inner">
+                        <h3>Aeration</h3>
+                        <p>Improve lawn health with aeration, which reduces soil compaction and helps water, air, and nutrients reach the roots for a stronger, greener lawn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services_image-buffer">
+        <div>
+            <img src="" alt="">
+        </div>
+        <img class="image-right" src="./assets/landscape-right.svg" alt="">
+        <img class="image-left" src="./assets/landscape-left.svg" alt="">
+    </section>
+    <section id="why">
+        <h2>Why choose us for property maintenance?</h2>
+        <div class="why-wrapper">
+            <div class="why-item">
+                <img src="./assets/piggy.gif" alt="">
+                <p>Competitive rates with no hidden fees.</p>
+            </div>
+            <div class="why-item">
+                <img src="./assets/wrench.gif" alt="">
+                <p>Committed to quality and professionalism.</p>
+            </div>
+            <div class="why-item">
+                <img src="./assets/check.gif" alt="">
+                <p>Consistent, on-time service.</p>
+            </div>
+        </div>
+        <img class="badge" src="./assets/badge.svg" alt="">
+    </section>
+    <section id="contact">
+        <span class="topper">Get your lawn back to tip top shape!</span>
+        <h2>Schedule a Free Estimate</h2>
+        <div class="contact-wrapper">
+            <div>
+                <form form name="contact" method="POST" data-netlify="true" action="/thank-you">
+                    <input type="hidden" name="form-name" value="contact"> <!--hidden input-->
+                    <label for="basic" class="form-section-label">Basic Info</label>
+                    <div id="basic" class="form-container">
+                        <!-- Name, Email, and Phone -->
+                        <div class="form-container_inner">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-container_inner">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-container_inner">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required
+                                placeholder="1234567890">
+                        </div>
+                    </div>
+
+                    <!-- Address Block -->
+                    <label for="address" class="form-section-label">Address</label>
+                    <div id="address" class="form-container">
+                        <div class="form-container_inner">
+                            <label for="street">Street:</label>
+                            <input type="text" id="street" name="street" required>
+                        </div>
+                        <div class="form-container_inner">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-container_inner">
+                            <label for="state">State:</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-container_inner">
+                            <label for="zipcode">ZIP Code:</label>
+                            <input type="text" id="zipcode" name="zipcode" required pattern="[0-9]{5}"
+                                placeholder="12345">
+                        </div>
+                    </div>
+
+                    <!-- Checklist -->
+                    <label for="form-services" class="form-section-label">How can we help?</label>
+                    <div id="form-services">
+                        <div class="checkbox-wrapper">
+                            <label><input type="checkbox" name="services[]" value="lawncare"> Lawn Maintenance</label>
+                            <label><input type="checkbox" name="services[]" value="landscaping"> Landscaping</label>
+                            <label><input type="checkbox" name="services[]" value="sod"> Sod Install</label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <label><input type="checkbox" name="services[]" value="landscaping"> Landscaping</label>
+                            <label><input type="checkbox" name="services[]" value="flowerbed"> Flowerbed Maintenance</label>
+                            <label><input type="checkbox" name="services[]" value="aeration"> Aeration</label>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <label for="additional-comments">Additional Comments and Requests</label>
+                        <textarea id="additional-comments" name="additional-comments" rows="10"
+                            placeholder="Let us know any specific details or requests..."></textarea>
+                    </div>
+
+
+                    <!-- Subscription Dropdown -->
+                    <!-- <label for="subscription">Choose a Subscription Plan:</label>
+                    <div class="subscription-container">
+                        <select id="subscription" name="subscription" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="pay-as-you-go">Pay as you go</option>
+                            <option value="6-month">6-month</option>
+                            <option value="9-month">9-month</option>
+                            <option value="12-month">12-month</option>
+                        </select>
+                    </div> -->
+
+                    <button class="form-submit" type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <a href="#nav" class="toTop"><img src="./assets/uparrow.svg" alt=""></a>
+    <footer>
+        <div>
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="tel:13256695050">1-325-669-5050</a></li>
+                <li class="centered"><a
+                        href="mailto:outwestmowingandservices@gmail.com">outwestmowingandservices@gmail.com</a></li>
+            </ul>
+            <div class="social-wrapper">
+                <!-- <a href="https://www.facebook.com/SETXLawncareSolutions" target="_blank"><img src="./assets/fb.gif" alt=""></a> -->
+                <!-- <a href="https://www.google.com/search?q=Southeast+Texas+Lawn+Care+Solutions&ludocid=5295056573964723355&sa=X&ved=2ahUKEwj27oOF5viKAxXGRjABHSQPIiwQ_coHegQIIBAB&sxsrf=ADLYWIJAZrI9JkX7inevO7IuvDPkcDTqbA:1736980884951#lpg=cid:CgIgAQ%3D%3D" target="_blank"><img src="./assets/google.gif" alt=""></a> -->
+            </div>
+            <a href="tel:13256695050"><button>Call Now</button></a>
+        </div>
+        <div>
+            <p>We look forward to working with you!</p>
+            <img class="footer-logo" src="./assets/outwest.png" alt="">
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>© 2025 Outwest <em>all rights reserved</em></p>
+        <p class="plug">site designed, developed, and mainatained by <a
+                href="https://chancewebstudio.netlify.app/" target="_blank">Chance Web Studio</a></p>
+        <a href="https://lordicon.com/" target="_blank">Animated icons by Lordicon.com</a>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

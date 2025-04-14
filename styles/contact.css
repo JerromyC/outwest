@@ -1,0 +1,264 @@
+#contact {
+    background-color: var(--tertiary);
+    color: #fff;
+    padding: 32px 16px;
+    text-align: center;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin: 32px auto;
+    margin-top: 0px;
+}
+
+.contact-wrapper > div {
+    width: clamp(100px, 100%, 1000px);
+    text-align: left;
+}
+
+.contact-wrapper > div > img {
+    height: auto;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+.contact-wrapper> div:last-of-type {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 64px;
+    margin-top: 64px;
+}
+
+
+
+form {
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+    padding: 32px 16px;
+    border-radius: 10px;
+    color: var(--tertiary);
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    flex-direction: column; /* Default stacking for mobile */
+}
+
+.form-container_inner {
+    flex: 1 1 100%; /* Full-width on mobile */
+}
+
+.form-section-label {
+    font-size: 18pt;
+    text-align: center;
+    margin: 32px auto 16px;
+    width: 80%;
+    border-bottom: 2px solid white;
+    padding-bottom: 8px;
+}
+
+.form-section-label:first-of-type {
+    margin-top: 0px;
+}
+
+#address {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#address .form-container_inner {
+    flex: 1 1 100%; /* Default to full-width for all on mobile */
+}
+
+#address .form-container_inner:nth-child(1) {
+    flex: 1 1 100%; /* Ensure Street is always full-width */
+}
+
+#address .form-container_inner:nth-child(n+2) {
+    flex: 1 1 calc(33.333% - 16px); /* City, State, ZIP share space on larger screens */
+}
+
+#form-services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 16px auto 32px;
+}
+
+#form-services label {
+    display: flex;
+    align-items: left; 
+    font-weight: normal;
+    font-size: 14px;
+    gap: 8px; /* Space between checkbox and label text */
+}
+
+#form-services input[type="checkbox"] {
+    width: auto; /* Maintain natural size for checkboxes */
+    height: auto; /* Ensure consistent checkbox size */
+    margin: auto 0px;
+}
+
+#form-services .checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 8px;
+    width: auto;
+    min-width: 200px;
+    margin: 0px;
+}
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 99%;
+    margin-bottom: 32px;
+}
+
+.subscription-container {
+    display: flex;
+    flex-direction: column; /* Default stacking for smaller screens */
+    gap: 16px;
+}
+
+form button {
+    width: auto;
+    height: 40px;
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-radius: 50px;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.form-submit {
+    width: 100%;
+    margin: auto;
+}
+
+/* Larger screens: Three inputs per row */
+@media screen and (min-width: 768px) {
+    .contact-wrapper > div {
+        width: clamp(100px, 100%, 800px);
+        text-align: left;
+    }
+
+    form {
+        padding: 64px 32px;
+    }
+
+    .form-container {
+        flex-direction: row; /* Switch to row layout */
+    }
+
+    .form-container_inner {
+        flex: 1 1 calc(33.333% - 16px); /* Three items per row */
+    }
+
+    #address {
+        flex-direction: row;
+    }
+
+    #address .form-container_inner:nth-child(1) {
+        flex: 1 1 100%; /* Street remains full-width */
+    }
+
+    #address .form-container_inner:nth-child(n+2) {
+        flex: 1 1 calc(33.333% - 16px); /* City, State, ZIP are aligned below */
+    }
+
+    .subscription-container {
+        flex-direction: row; /* Align dropdown and button horizontally */
+        align-items: center; /* Center items vertically */
+        justify-content: space-between; /* Add space between items */
+        gap: 16px; /* Space between dropdown and button */
+    }
+
+    .subscription-container select,
+    .subscription-container button {
+        flex: 1; /* Distribute space evenly */
+        max-width: calc(50% - 8px); /* Optional: Ensure equal widths */
+    }
+
+    .form-submit {
+        width: 50%;
+        margin: auto;
+        /* margin-left: 50%; */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* form {
+    max-width: 600px;
+    margin: auto;
+    background-color: var(--tertiary);
+    padding: 32px 64px;
+    border-radius: 10px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+} */

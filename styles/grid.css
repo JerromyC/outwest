@@ -1,0 +1,36 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: stretch; /* Makes all items match the tallest */
+    gap: 16px;
+    margin: auto;
+}
+
+.grid-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 700px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .large-cell {
+        max-width: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .large-cell {
+        grid-column: span 2;
+    }
+}

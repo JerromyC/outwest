@@ -1,0 +1,118 @@
+@import url(./styles/nav.css);
+@import url(./styles/hero.css);
+@import url(./styles/services.css);
+@import url(./styles/why.css);
+@import url(./styles/grid.css);
+@import url(./styles/contact.css);
+@import url(./styles/footer.css);
+
+
+@import url(./styles/thank-you.css);
+
+@font-face {
+    font-family: 'AlbertSans';
+    src: url('./assets/fonts/AlbertSans_wght_.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Castoro';
+    src: url('./assets/fonts/Castoro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --primary: #017143;
+    --secondary: #EEEEE5;
+    --tertiary: #023822;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: 'AlbertSans', sans-serif;
+}
+
+
+/* global--------------------------------------------------------------- */
+
+h1 {
+    font-family: 'Castoro', sans-serif;
+    font-size: clamp(24pt, 5vw, 40pt);
+    line-height: clamp(25pt, 5.2vw, 40pt);
+    width: 100%;
+    color: #fff;
+}
+
+h2 {
+    font-family: 'Castoro', sans-serif;
+    font-size: clamp(20pt, 4vw, 30pt);
+    line-height: clamp(20pt, 4vw, 30pt);
+}
+
+h3 {
+    font-family: 'Castoro', sans-serif;
+    font-size: clamp(14pt, 2.5vw, 16pt);
+}
+
+a {
+    cursor: pointer;
+    width: 100%;
+    max-width: 350px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 14pt;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p, li {
+    font-size: clamp(12pt, 2vw, 14pt);
+}
+
+ul {
+    list-style: none;
+}
+
+.topper {
+    display: block;
+    font-size: clamp(12pt, 2vw, 14pt);
+    margin-bottom: 8px;
+}
+
+.toTop {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: clamp(50px, 10vw, 75px);
+    height: clamp(50px, 10vw, 75px);
+    background-color: var(--secondary);
+    border: 5px solid var(--primary);
+    color: var(--primary);
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    opacity: 50%;
+    z-index: 100;
+}
+
+.toTop:hover {
+    opacity: 1;
+}
+
+.toTop img {
+    height: 50%;
+    margin: auto;
+}

@@ -1,0 +1,121 @@
+/* services------------------------------------------------------------- */
+#services {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px 16px;
+    padding-top: 0px;
+}
+
+#services h2 {
+    margin-bottom: 16px;
+}
+
+.service-grid_wrapper_text {
+    padding-bottom: 32px;
+}
+
+.service-grid_wrapper {
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    height: 100%;
+}
+
+.service-grid_wrapper img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    margin: 0px;
+    margin-bottom: -5px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.service-grid_wrapper-inner {
+    background-color: #fff;
+    color: var(--primary);
+    padding: 20px;
+    margin: 0px;
+    border-radius: 20px;
+    border: 3px solid var(--primary);
+    flex: 1;
+    height: auto;
+}
+
+#services_image-buffer {
+    position: relative;
+    height: 100px;
+    z-index: -1;
+}
+
+.image-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+}
+
+.image-left {
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
+    #services {
+        padding: 64px;
+    }
+
+    .service-grid_wrapper_text {
+        padding-right: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #services {
+        padding: 64px;
+        padding-top: 0px;
+    }
+
+    .service-grid_wrapper {
+        margin-top: auto;
+    }
+
+    .service-grid_wrapper_text {
+        align-items: center;
+        margin: auto;
+    }
+
+    .service-grid_wrapper_text h2,
+    .service-grid_wrapper_text p {
+        width: 80%;
+    }
+
+    .service-grid_wrapper img {
+        height: 300px;
+    }
+
+    .service-grid_wrapper_first img {
+        height: 400px;
+    }
+
+    /* image buffer */
+    #services_image-buffer {
+        position: relative;
+        height: 100px;
+        z-index: -1;
+    }
+
+    .image-right {
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+    }
+
+    .image-left {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}

@@ -1,0 +1,42 @@
+#thank-you {
+    background-color: var(--primary);
+    padding: 64px 16px;
+}
+
+#thank-you h1 {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: clamp(20pt, 6vw, 30pt);
+    line-height: clamp(21pt, 6.2vw, 30pt);
+}
+
+#thank-you div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: clamp(100px, 100%, 700px);
+    margin: 32px auto;
+    padding: 32px;
+    background-color: var(--secondary);
+    border-radius: 20px;
+}
+
+#thank-you div p {
+    font-size: clamp(14pt, 2vw, 18pt);
+}
+
+#thank-you div p span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#thank-you div a {
+    color: var(--secondary);
+}
+
+#thank-you div a:last-of-type {
+    margin: auto;
+    text-align: center;
+    text-decoration: underline;
+}
