@@ -1,5 +1,9 @@
 #thank-you {
-    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    color: var(--primary);
     padding: 64px 16px;
 }
 
@@ -9,6 +13,11 @@
     text-align: center;
     font-size: clamp(20pt, 6vw, 30pt);
     line-height: clamp(21pt, 6.2vw, 30pt);
+    color: var(--primary);
+}
+
+#thank-you img {
+    margin: auto;
 }
 
 #thank-you div {
@@ -39,4 +48,31 @@
     margin: auto;
     text-align: center;
     text-decoration: underline;
+}
+
+#services_image-buffer-thanks {
+    position: relative;
+    height: 100px;
+    z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+    #services_image-buffer-thanks {
+        position: relative;
+        height: 100px;
+        z-index: 1000;
+    }
+
+    .thanksImage-right {
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+    }
+
+    .thanksImage-left {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
 }
