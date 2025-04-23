@@ -1,0 +1,91 @@
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--tertiary);
+    padding-bottom: 64px;
+}
+
+.carousel h2 {
+    text-align: center;
+    color: var(--secondary);
+    margin-bottom: 32px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+.carousel-image {
+    min-width: 100%;
+    object-fit: cover;
+    height: auto;
+    display: block;
+}
+
+.carousel-overlay {
+    display: none;
+}
+
+.carousel-arrows {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.arrow {
+    background: var(--primary);
+    color: var(--secondary);
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+    touch-action: manipulation; /* Prevents double-tap zoom on mobile */
+}
+
+.arrow:hover {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+
+@media screen and (min-width: 768px) { 
+    .carousel-wrapper {
+        position: relative;
+        justify-content: center; /* Centers the track */
+    }
+
+    .carousel-track {
+        width: fit-content;
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    .carousel-image {
+        width: 100%;
+        max-width: 500px; /* Set this to how wide you want each image */
+        margin: 0 32px;
+        flex-shrink: 0;
+        z-index: 1;
+    }
+    
+    .carousel-arrows {
+        position: relative;
+        z-index: 3;
+        width: 50%;
+    margin: 32px auto;
+    }
+}

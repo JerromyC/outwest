@@ -18,6 +18,7 @@
 
 #thank-you img {
     margin: auto;
+    max-width: 100%;
 }
 
 #thank-you div {
